@@ -28,7 +28,7 @@ const ListItems = () => {
     <>
       {postsDataLoading ? (
         <CustomLoader />
-      ) : (
+      ) : postsData.length > 0 ? (
         <Stack
           sx={{
             mb: "5rem",
@@ -70,6 +70,8 @@ const ListItems = () => {
             onChange={handleChangePage}
           />
         </Stack>
+      ) : (
+        <p>No data found</p>
       )}
     </>
   );
