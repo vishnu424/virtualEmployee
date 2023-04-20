@@ -1,22 +1,22 @@
 import { Typography, Box } from "@mui/material";
 
-function Footer() {
+const Footer = () => {
   const footerStyle = {
     backgroundColor: "#3f51b5",
     color: "#fff",
     padding: "16px",
-    position: "fixed",
-    bottom: 0,
+    boxSizing: "border-box",
     width: "100%",
+    marginTop: "5rem",
   };
 
   return (
     <Box sx={footerStyle}>
       <Typography variant="body1" align="center">
-        © {new Date().getFullYear()} My Awesome Website
+        © {new Date().getFullYear()} Virtual Employee
       </Typography>
     </Box>
   );
-}
+};
 
 export default Footer;
